@@ -4,6 +4,11 @@
   border: 3px solid rgb(8, 125, 19);
   text-align: center;
   color: white;
+  border-radius: 10px;
+}
+
+.card:hover {
+  opacity: 50%;
 }
 
 .card img {
