@@ -4,15 +4,39 @@
   border: 3px solid rgb(8, 125, 19);
   text-align: center;
   color: white;
-  height: fit-content;
-  /* object-fit: cover; */
+}
+
+.card img {
+  height: 20em;
+  object-fit: cover;
 }
 
 .movie-details {
   background-color: black;
+  height: 10em;
 }
 
 .movie-details > h4:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  .card img {
+    height: 10em;
+  }
+
+  .movie-details {
+    height: 5em;
+  }
+
+  .movie-details h4 {
+    font-size: 5px;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+
+  .movie-details p {
+    font-size: 3px;
+  }
 }
