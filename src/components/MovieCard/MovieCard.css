@@ -37,14 +37,13 @@
   }
 
   .movie-details {
+    overflow: scroll;
     height: 5em;
   }
-
-  .movie-details {
-    overflow: scroll;
-  }
+  
   .movie-details h4 {
     font-size: 13px;
+      max-width: 100px;
   }
 
   .movie-details p {
