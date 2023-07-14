@@ -6,7 +6,7 @@ function SearchBar() {
   const [searchInput, setSearchInput] = useState('');
   let [searchParams, setSearchParams] = useSearchParams('');
 
-  // const title = searchParams.get('title');
+  const title = searchParams.get('title');
 
   // const handleSearch = event => {
   //   setSearchInput(event.target.value);
@@ -25,7 +25,7 @@ function SearchBar() {
   return (
     <div className='search-bar'>
       <label>
-        <input name='search-input' type='text' placeholder='search movie by...' onChange={event => handleChange(event) }/>
+        <input name='search-input' type='text' placeholder='search movie by...' onChange={event => handleChange(event)} value={title}/>
       </label>
         <button className='search-button' onClick={handleClick}>Search</button>
     </div>
