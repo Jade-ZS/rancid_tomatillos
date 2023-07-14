@@ -20,7 +20,7 @@ function SearchBar() {
   return (
     <div className='search-bar'>
       <label>
-        <input name='search-input' type='text' placeholder='search movie by...' onChange={event => handleChange(event)} value={title}/>
+        <input name='search-input' type='text' placeholder='search movie by...' onChange={event => handleChange(event)} value={title || ''}/>
       </label>
         <button className='search-button' onClick={handleClick}>Search</button>
     </div>
