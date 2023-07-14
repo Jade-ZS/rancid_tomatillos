@@ -16,9 +16,6 @@ function MovieCardContainer({getFetchError}) {
     .catch(err => getFetchError(err))
   },[])
 
-  let [searchParams] = useSearchParams();
-  let title = searchParams.get('title');
-
   const renderMovieCardContainer = movies => {
     return movies.map(movie => 
       <Link to={`/${movie.id}`} key={movie.id}>
@@ -33,8 +30,18 @@ function MovieCardContainer({getFetchError}) {
     )
   }
 
+  const renderNotFound = () => {
+    return (
+      <div className='no-result-container'>
+        <p>Sorry, no matched movie was found. Please try a different keyword.</p>
+      </div>
+    )
+  };
+
+  let [searchParams] = useSearchParams();
+  let title = searchParams.get('title');
   let searchResult = title ? searchMovies(title, movieData) : movieData;
-  let movieElements = renderMovieCardContainer(searchResult);
+  let movieElements = searchResult.length ? renderMovieCardContainer(searchResult) : renderNotFound();
 
 
   return (
