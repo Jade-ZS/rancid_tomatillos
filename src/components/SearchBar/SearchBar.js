@@ -8,11 +8,6 @@ function SearchBar() {
 
   const title = searchParams.get('title');
 
-  // const handleSearch = event => {
-  //   setSearchInput(event.target.value);
-  //   setSearchParams({title: event.target.value});
-  // }
-
   const handleChange = (event) => {
     setSearchInput(event.target.value);
     setSearchParams({title: event.target.value});  
