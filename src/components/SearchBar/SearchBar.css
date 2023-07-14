@@ -1,0 +1,31 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 40vw;
+  background-color:rgba(110, 110, 110, 0.5);
+  color: white;
+  font-weight: bold;
+  height: 1.8em;
+  border-right: none;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-button {
+  background: green;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
+  border-radius: 3px;
+  border: none;
+  height: 1.9rem;
+}
+
+.search-button:hover {
+  background: #BF565A;
+}
